@@ -1,5 +1,5 @@
 from army_methods import Army_methods
-
+import random
 
 class Armies(Army_methods):
 
@@ -43,7 +43,12 @@ class Armies(Army_methods):
 
     # Battle strength calculator
     def strength_calculator(self, classobject):
-        army_strength = 10
+        raw_strength = classobject.size
+        # Random element generator for number between 0 and 5
+        random_element = random.randint(0, 5)
+        # Creating strength modifier
+        strength_modifier = 1 + (classobject.leadership / 10) + random_element
+        army_strength = raw_strength * strength_modifier
         return army_strength
 
     # Method for when an army is defeated by another
@@ -61,11 +66,12 @@ class Armies(Army_methods):
         army1.size = army1.size - 2
         army2.size = army2.size - 2
         print("\nThe armies have clashed and the battle was inconclusive")
-        # If else loop to check
+        # If loop to check if army is defeated
         if army1.size <= 0:
             self.defeated_armies(army1)
         else:
             print("\n" + army1.leader + "'s strength is now " + str(army1.size) + ",000 strong. ")
+        # If loop to check if army is defeated
         if army2.size <= 0:
             self.defeated_armies(army2)
         else:

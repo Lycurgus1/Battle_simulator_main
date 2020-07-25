@@ -1,7 +1,7 @@
 from armies import Armies
 
-army1 = Armies("Attila", 9)
-army2 = Armies("Aetius", 7)
+army1 = Armies("Attila", 10)
+army2 = Armies("Aetius", 3)
 obj1 = Armies()
 
 army1.hunnic_army()
