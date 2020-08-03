@@ -1,10 +1,7 @@
+from user_inteface import User_interface
 from armies import Armies
 
-army1 = Armies("Attila", 10)
-army2 = Armies("Aetius", 3)
-obj1 = Armies()
+obj1 = User_interface()
 
-army1.hunnic_army()
-army2.roman_army()
 
-obj1.fight(army1, army2)
+
