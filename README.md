@@ -1,9 +1,7 @@
-# Main project run file
+# What is this?
 
-**Armies**
+This is a repositry for code as part of the battle simulator app project.
 
-Contains armies 
-
-**Army methods**
-
-Contains methods for modify army statistics
+## It contains:
+- Armies, Contains armies 
+- Army methods, Contains methods for modify army statistics
